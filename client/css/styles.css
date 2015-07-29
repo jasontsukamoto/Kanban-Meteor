@@ -1,0 +1,25 @@
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-item {
+  flex-grow: 1;
+  background-color: red;
+  width: 33%;
+  margin: 5px;
+}
+
+.newTaskForm.hidden {
+  display: none;
+}
+
+.newTaskForm.show {
+  display: block;
+}
+
+.note {
+  height: 100px;
+  width: 90%;
+  border: 1px solid black;
+}

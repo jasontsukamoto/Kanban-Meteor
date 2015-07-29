@@ -1,0 +1,22 @@
+<template name="tasks">
+  <div class="flex-container">
+    <div class="flex-item" id="toDo">
+      <h1>To Do</h1>
+      {{#each queueList}}
+        {{> toDo}}
+      {{/each}}
+    </div>
+    <div class="flex-item" id="inProgress">
+      <h1>working on it</h1>
+      {{#each inProgressList}}
+        {{> workingOnIt}}
+      {{/each}}
+    </div>
+    <div class="flex-item" id="done">
+      <h1>all pau</h1>
+      {{#each finishedList}}
+        {{> completed}}
+      {{/each}}
+    </div>
+  </div>
+</template>

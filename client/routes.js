@@ -19,3 +19,7 @@ Router.route('/profile/edit', function() {
 Router.route('/logout', function() {
   this.render('dashboard');
 });
+
+Router.route('/newtask', function() {
+  this.render('form');
+})
