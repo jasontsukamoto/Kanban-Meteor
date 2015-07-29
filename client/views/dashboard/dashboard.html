@@ -1,0 +1,6 @@
+<template name="dashboard">
+  <h1>Welcome to my kanban</h1>
+  {{#if currentUser}}
+    <h1>Welcome <a href="/profile/edit">{{username}}</a></h1>
+  {{/if}}
+</template>
