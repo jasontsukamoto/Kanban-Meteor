@@ -1,16 +1,9 @@
-Template.postNew.events({
-  // 'click #newTaskShow' : function(evt, templ) {
-  //   evt.preventDefault();
-  //   var form = $('.newTaskForm');
-  //   form.removeClass('hidden');
-  //   form.addClass('show');
-  // },
+Template.postNewForm.events({
 
   'click #save' : function(evt, templ) {
     evt.preventDefault();
     var title = templ.find('#title').value;
     var description = templ.find('#description').value;
-    console.log('templ.find("#title")',templ.find("#title"));
     if (title === '') {
       return;
     }
@@ -24,9 +17,7 @@ Template.postNew.events({
       status : 'default'
     });
 
-    // var form = $('.newTaskForm');
-    // form.addClass('hidden');
-    // form.removeClass('show');
-
+    $('#postNewModal').foundation('reveal', 'close');
   }
 });
+

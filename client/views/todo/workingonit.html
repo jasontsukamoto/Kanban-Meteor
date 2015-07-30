@@ -1,9 +1,13 @@
 <template name="workingOnIt">
-  <div class="note">
-    <div class="title">{{title}}</div>
-    <div class="description">{{description}}</div>
-    <div class="delete">x</div>
-    <div class="done">Check Off</div>
-    <div class="backToQueue">Back To Queue</div>
+  <div class="workingNote">
+    <div class="messageField">
+      <div class="title">{{title}}</div>
+      <div class="description">{{description}}</div>
+      <div class="editButtons">
+        <div class="delete">Delete</div>
+        <div class="done">Completed</div>
+        <div class="backToQueue">Didn't start</div>
+      </div>
+    </div>
   </div>
 </template>

@@ -1,15 +1,19 @@
 <template name="postNew">
-  <a href="#" data-reveal-id="postNewModal" id="newTaskShow">+</a>
-  <div id="postNewModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
-
-    <form class="newTaskForm">
-      <h1>Title</h1>
-      <input type="text" id="title">
-      <p>Description</p>
-      <input type="text" id="description">
-      <button type="button" id="save">Submit</button>
-    </form>
+  <!-- {{#if currentUser}} -->
+    <a href="#" data-reveal-id="postNewModal" id="newTaskShow">+</a>
+    <div id="postNewModal" class="reveal-modal" data-reveal aria-hidden="true" role="dialog">
+      {{> postNewForm}}
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-  </div>
+    </div>
+  <!-- {{/if}} -->
+</template>
 
+<template name="postNewForm">
+  <form class="newTaskForm">
+    <h1>Title</h1>
+    <input type="text" id="title">
+    <p>Description</p>
+    <input type="text" id="description">
+    <button type="button" id="save">Submit</button>
+  </form>
 </template>

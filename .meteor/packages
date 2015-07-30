@@ -10,6 +10,6 @@ insecure
 iron:router
 accounts-ui
 accounts-password
-mizzao:bootboxjs
 jquery
 foundation
+fourseven:scss

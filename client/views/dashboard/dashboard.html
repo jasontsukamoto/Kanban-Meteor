@@ -1,11 +1,12 @@
 <template name="dashboard">
-  <div id="welcome">
-    <p>Kanban - To Do List</p>
-    {{> postNew}}
+  <div class="background">
+    <div id="welcome">
+      {{> postNew}}
+      {{#if currentUser}}
+        <p>Welcome! <a href="/profile/edit">{{username}}</a></p>
+        {{> tasks}}
+      {{/if}}
+    </div>
   </div>
-  {{#if currentUser}}
-    <h1>Welcome <a href="/profile/edit">{{username}}</a></h1>
-    {{> tasks}}
-  {{/if}}
   <script>$(document).foundation();</script>
 </template>

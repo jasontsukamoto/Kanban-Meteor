@@ -1,22 +1,30 @@
 <template name="tasks">
-  <div class="flex-container">
-    <div class="flex-item" id="toDo">
-      <h1>To Do</h1>
-      {{#each queueList}}
-        {{> toDo}}
-      {{/each}}
+  <div class="row fullWidth">
+    <div class="small-12 large-4 medium-4 columns userColumn" id="toDo">
+      <div class="headerColumn">
+        <p>To Do</p>
+        {{#each queueList}}
+          {{> toDo}}
+        {{/each}}
+      </div>
     </div>
-    <div class="flex-item" id="inProgress">
-      <h1>working on it</h1>
-      {{#each inProgressList}}
-        {{> workingOnIt}}
-      {{/each}}
+    <div class="small-12 large-4 medium-4 columns userColumn" id="inProgress">
+      <div class="headerColumn">
+        <p>Doing</p>
+        {{#each inProgressList}}
+          {{> workingOnIt}}
+        {{/each}}
+      </div>
+
     </div>
-    <div class="flex-item" id="done">
-      <h1>all pau</h1>
-      {{#each finishedList}}
-        {{> completed}}
-      {{/each}}
+    <div class="small-12 large-4 medium-4 columns userColumn" id="done">
+      <div class="headerColumn">
+        <p>Done!</p>
+          {{#each finishedList}}
+            {{> completed}}
+          {{/each}}
+      </div>
+
     </div>
   </div>
 </template>

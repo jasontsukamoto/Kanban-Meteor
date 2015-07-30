@@ -1,8 +1,12 @@
 <template name="completed">
-   <div class="note">
-    <div class="title">{{title}}</div>
-    <div class="description">{{description}}</div>
-    <div class="delete">x</div>
-    <div class="backToWorking">Back To Working</div>
+   <div class="completedNote">
+    <div class="messageField">
+      <div class="title">{{title}}</div>
+      <div class="description">{{description}}</div>
+      <div class="editButtons">
+        <div class="delete">Delete</div>
+        <div class="backToWorking">In Progress</div>
+      </div>
+    </div>
   </div>
 </template>
