@@ -1,11 +1,14 @@
 <template name="toDo">
   <div class="toDoNote">
     <div class="messageField">
-      <div class="title">{{title}}</div>
+      <div class="titleHeaderRow">
+        <div class="title">{{title}}</div>
+        <div class="delete">x</div>
+      </div>
       <div class="description">{{description}}</div>
       <div class="editButtons">
-        <div class="delete">Delete</div>
-        <div class="workingOnIt">Started</div>
+        <div class="workingOnIt">Start Task</div>
+        <div class="timestamp">{{added}}</div>
       </div>
     </div>
   </div>

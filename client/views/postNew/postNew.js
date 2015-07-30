@@ -2,9 +2,10 @@ Template.postNewForm.events({
 
   'click #save' : function(evt, templ) {
     evt.preventDefault();
+    console.log('###########');
     var title = templ.find('#title').value;
     var description = templ.find('#description').value;
-    if (title === '') {
+    if (title === '' || description === '') {
       return;
     }
 
@@ -13,11 +14,21 @@ Template.postNewForm.events({
       title : title,
       description : description,
       show : true,
-      added : Date.now(),
+      added : moment().format('MMM D YYYY'),
       status : 'default'
     });
 
+    templ.find('#title').value = "";
+    templ.find('#description').value = "";
+
+
     $('#postNewModal').foundation('reveal', 'close');
   }
+
 });
 
+Template.postNewForm.rendered = function() {
+  $('#newTaskShow').click(function() {
+    $('#postNewModal').foundation('reveal', 'open');
+  });
+};

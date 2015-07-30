@@ -1,12 +1,15 @@
 <template name="workingOnIt">
   <div class="workingNote">
     <div class="messageField">
-      <div class="title">{{title}}</div>
+      <div class="titleHeaderRow">
+        <div class="title">{{title}}</div>
+        <div class="delete">x</div>
+      </div>
       <div class="description">{{description}}</div>
       <div class="editButtons">
-        <div class="delete">Delete</div>
-        <div class="done">Completed</div>
-        <div class="backToQueue">Didn't start</div>
+        <div class="done">Done!</div>
+        <div class="backToQueue">Back To Do</div>
+        <div class="timestamp">{{added}}</div>
       </div>
     </div>
   </div>
