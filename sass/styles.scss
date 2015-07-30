@@ -1,3 +1,49 @@
+.deleteButtonClass {
+  float: right;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 17px;
+  color: red;
+  font-weight: bolder;
+}
+
+.rightButtonClass {
+  font-size: .8em;
+  width: 32%;
+  text-align: center;
+  border-radius: 5px;
+  display: inline-block;
+  float: right;
+  background-color: rgba(108,85,36,.4);
+  font-weight: bolder;
+}
+
+.centerButtonClass {
+  width: 32%;
+  display: inline-block;
+  background-color: rgba(0,155,0,.4);
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: .8em;
+  margin-left: 5px;
+}
+
+.leftButtonClass {
+  width: 32%;
+  display: inline-block;
+  font-size: .8em;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(0,155,0,.4);
+  float: left;
+
+}
+
 .background {
   background-image: url('http://radio.upgradedape.com/wp-content/uploads/2015/01/paper-based-to-do-list-productivity-.jpg');
   background-repeat: no-repeat;
@@ -26,7 +72,6 @@
       color: white;
       font-size: 2em;
       font-weight: bolder;
-      line-height: 80px;
       font-family: 'Timmana', sans-serif;
     }
 
@@ -36,24 +81,22 @@
 
       .headerColumn {
         background-color: rgba(220,220,220,.7);
-        // height: 800px;
         border-radius: 15px;
         text-align: left;
-        padding: 0 10px;
+        padding: 20px 10px;
 
-        p {
+        > p {
           font-family: 'Timmana', sans-serif;
           font-size: 2.3em;
           color: black;
           margin-left: 10px;
+          margin-bottom: 0px;
         }
 
         .toDoNote {
           background-color: rgba(255,255,255,.8);
-          margin: 10px;
+          margin: 0 10px 10px 10px;
           border-radius: 15px;
-          position: relative;
-          top: -25px;
 
           .messageField {
             font-family: Arial, sans-serif;
@@ -62,49 +105,33 @@
             .titleHeaderRow {
               height: 25px;
               border-bottom: 1px solid black;
+              margin-bottom: 5px;
               .title {
                 display: inline-block;
                 float: left;
                 font-weight: bolder;
               }
               .delete {
-                float: right;
-                height: 20px;
-                width: 20px;
-                border-radius: 5px;
-                border: 1px solid black;
-                text-align: center;
-                line-height: 17px;
-                color: red;
-                font-weight: bolder;
+                @extend .deleteButtonClass;
               }
             }
 
-            .editButtons {
+            .taskFooter {
               margin: auto;
+              margin-top: 5px;
 
               .workingOnIt {
-                display: inline-block;
-                font-size: .8em;
-                font-weight: bolder;
-                margin: auto;
-                width: 70px;
-                text-align: center;
-                border-radius: 5px;
-                background-color: rgba(0,155,0,.4);
+                @extend .leftButtonClass;
 
               }
 
-              .timestamp {
-                font-size: .8em;
-                width: 80px;
-                text-align: center;
-                border-radius: 5px;
-                display: inline-block;
-                float: right;
-                background-color: rgba(108,85,36,.4);
-                font-weight: bolder;
+              .hidden {
+                @extend .centerButtonClass;
+                visibility: hidden;
+              }
 
+              .timestamp {
+                @extend .rightButtonClass;
               }
             }
           }
@@ -112,41 +139,43 @@
 
         .workingNote {
           background-color: rgba(255,255,255,.8);
-          margin: 10px;
+          margin: 0px 10px 10px 10px;
           border-radius: 15px;
 
           .messageField {
-            font-family: 'Permanent Marker', cursive;
-            padding: 20px;
+            font-family: Arial, sans-serif;
+            padding: 10px;
 
-            .title {
-              color: blue;
-              text-align: center;
-              font-size: 1.4em;
-              text-decoration: underline;
+            .titleHeaderRow {
+              height: 25px;
+              border-bottom: 1px solid black;
               margin-bottom: 5px;
-            }
 
-            .description {
-              font-size: 1.4em;
-            }
-
-            .editButtons {
-              margin: auto;
-              width: 80%;
-              color: red;
+              .title {
+                display: inline-block;
+                float: left;
+                font-weight: bolder;
+              }
 
               .delete {
-                float: left;
-                display: inline-block;
-                margin-right: 15px;
+                @extend .deleteButtonClass;
               }
+            }
+
+            .taskFooter {
+              margin: auto;
+              margin-top: 5px;
+
               .done {
-                display: inline-block;
-                margin-right: 15px;
+                @extend .centerButtonClass;
+
               }
               .backToQueue {
-                display: inline-block;
+                @extend .leftButtonClass;
+                background-color: rgba(255,0,0,.4);
+              }
+              .timestamp {
+                @extend .rightButtonClass;
               }
             }
 
@@ -156,35 +185,45 @@
 
         .completedNote {
           background-color: rgba(255,255,255,.8);
-          margin: 10px;
+          margin: 0 10px 10px 10px;
           border-radius: 15px;
 
           .messageField {
-            font-family: 'Permanent Marker', cursive;
-            padding: 20px;
+            font-family: Arial, sans-serif;
+            padding: 10px;
 
-            .title {
-              color: blue;
-              text-align: center;
-              font-size: 1.4em;
-              text-decoration: underline;
+            .titleHeaderRow {
+              height: 25px;
+              border-bottom: 1px solid black;
               margin-bottom: 5px;
-            }
 
-            .description {
-              font-size: 1.4em;
-            }
-
-            .editButtons {
-              margin: auto;
-              width: 50%;
-              color: red;
+              .title {
+                display: inline-block;
+                float: left;
+                font-weight: bolder;
+              }
 
               .delete {
-                float: left;
+                @extend .deleteButtonClass;
               }
+            }
+
+            .taskFooter {
+              margin: auto;
+              margin-top: 5px;
+
               .backToWorking {
-                float: right;
+                @extend .leftButtonClass;
+                background-color: rgba(255,0,0,.4);
+              }
+
+              .centerButton {
+                @extend .centerButtonClass;
+                visibility: hidden;
+              }
+
+              .timestamp {
+                @extend .rightButtonClass;
               }
             }
           }
