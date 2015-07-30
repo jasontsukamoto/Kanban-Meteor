@@ -2,7 +2,6 @@ Template.postNewForm.events({
 
   'click #save' : function(evt, templ) {
     evt.preventDefault();
-    console.log('###########');
     var title = templ.find('#title').value;
     var description = templ.find('#description').value;
     if (title === '' || description === '') {
