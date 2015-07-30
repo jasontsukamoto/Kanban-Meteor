@@ -1,10 +1,12 @@
 <template name="dashboard">
   <div class="background">
     <div id="welcome">
-      {{> postNew}}
       {{#if currentUser}}
+        {{> postNew}}
         <p>Welcome! <a href="/profile/edit">{{username}}</a></p>
         {{> tasks}}
+      {{else}}
+        {{> login}}
       {{/if}}
     </div>
   </div>
