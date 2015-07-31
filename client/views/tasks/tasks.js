@@ -6,8 +6,10 @@ Template.tasks.rendered = function() {
   dragula([document.querySelector('#left'), document.querySelector('#right'), document.querySelector('#center')],
     { delay : 200, removeOnSpill : true })
     .on('drop', function(el, container, source) {
+
       var id = Blaze.getData(el)._id;
       var _status;
+
       switch (container.id) {
         case 'left':
           _status = 'default'
@@ -18,12 +20,22 @@ Template.tasks.rendered = function() {
         case 'center':
           _status = 'completed'
           break;
+        default :
+          _status = 'archived'
+          console.log('archived');
       }
 
       TasksCollection.update({ _id : id }, {
         $set : { status : _status }
       });
-    });
+    })
+    .on('remove', function(el, container, source) {
+      var id = Blaze.getData(el)._id;
+
+      TasksCollection.update({ _id : id }, {
+        $set : { status : 'archived' }
+      });
+    })
 };
 
 Template.tasks.destroyed = function() {
