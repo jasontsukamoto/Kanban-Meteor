@@ -1,30 +1,31 @@
 <template name="tasks">
-  <div class="row fullWidth">
-    <div class="small-12 large-4 medium-4 columns userColumn" id="toDo">
-      <div class="headerColumn">
+  <div class="wrapper row">
+    <div id="toDo" class="small-12 large-4 medium-4 columns userColumn">
+      <div class="headerColumn container" id="left">
         <p>To Do</p>
         {{#each queueList}}
           {{> toDo}}
         {{/each}}
       </div>
     </div>
+
     <div class="small-12 large-4 medium-4 columns userColumn" id="inProgress">
-      <div class="headerColumn">
+      <div id="right" class="container headerColumn">
         <p>Doing</p>
         {{#each inProgressList}}
           {{> workingOnIt}}
         {{/each}}
       </div>
-
     </div>
+
     <div class="small-12 large-4 medium-4 columns userColumn" id="done">
-      <div class="headerColumn">
+      <div id="center" class="container headerColumn">
         <p>Done!</p>
           {{#each finishedList}}
             {{> completed}}
           {{/each}}
       </div>
-
     </div>
+
   </div>
 </template>

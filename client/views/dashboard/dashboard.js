@@ -1,5 +1,19 @@
+Template.dashboard.created = function() {
+
+};
+
+Template.dashboard.rendered = function() {
+
+};
+
+Template.dashboard.destroyed = function() {
+
+};
+
 Template.dashboard.helpers({
-  username: function() {
-    return Meteor.user().emails[0].address;
-  }
+
+});
+
+Template.dashboard.events({
+
 });

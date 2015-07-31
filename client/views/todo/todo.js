@@ -1,5 +1,21 @@
+Template.toDo.created = function() {
+
+};
+
+Template.toDo.rendered = function() {
+
+};
+
+Template.toDo.destroyed = function() {
+
+};
+
+Template.toDo.helpers({
+
+});
+
 Template.toDo.events({
-  'click .delete' : function(evt, templ) {
+ 'click .delete' : function(evt, templ) {
     evt.preventDefault();
     TasksCollection.remove(this._id);
   },
@@ -11,4 +27,3 @@ Template.toDo.events({
     });
   }
 });
-

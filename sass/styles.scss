@@ -45,17 +45,17 @@
 }
 
 .background {
-  background-image: url('http://clintlosee.com/supergreenlizard/wp-content/uploads/2014/06/Gorton-Flow-Columbia-River-Gorge-Landscape-Nature-Photography.jpg');
+  background-image: url('http://www.wallcdn.com/wp-content/uploads/2015/04/San-Francisco-Golden-Gate-Bridge-High-Quality-Wallpaper-b4ude-Free1.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
-  position: fixed;
+  // position: fixed;
   width: 100%;
 
   #welcome {
     width: 100%;
     height: 60px;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.4);
     text-align: center;
 
     #newTaskShow {

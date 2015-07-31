@@ -1,3 +1,21 @@
+Template.postNewForm.created = function() {
+
+};
+
+Template.postNewForm.rendered = function() {
+  $('#newTaskShow').click(function() {
+    $('#postNewModal').foundation('reveal', 'open');
+  });
+};
+
+Template.postNewForm.destroyed = function() {
+
+};
+
+Template.postNewForm.helpers({
+
+});
+
 Template.postNewForm.events({
 
   'click #save' : function(evt, templ) {
@@ -26,8 +44,3 @@ Template.postNewForm.events({
 
 });
 
-Template.postNewForm.rendered = function() {
-  $('#newTaskShow').click(function() {
-    $('#postNewModal').foundation('reveal', 'open');
-  });
-};

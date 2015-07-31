@@ -1,8 +1,6 @@
 Template.login.created = function() {
   Accounts.onLogin(function() {
-    console.log('logged in');
     Router.go('dashboard');
-    // this.next();
   });
 };
 

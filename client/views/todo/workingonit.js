@@ -1,3 +1,19 @@
+Template.workingOnIt.created = function() {
+
+};
+
+Template.workingOnIt.rendered = function() {
+
+};
+
+Template.workingOnIt.destroyed = function() {
+
+};
+
+Template.workingOnIt.helpers({
+
+});
+
 Template.workingOnIt.events({
   'click .done' : function(evt, templ) {
     evt.preventDefault();
