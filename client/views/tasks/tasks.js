@@ -3,7 +3,30 @@ Template.tasks.created = function() {
 };
 
 Template.tasks.rendered = function() {
-  dragula([document.querySelector('#left'), document.querySelector('#right'), document.querySelector('#center')], { delay : 200 });
+  dragula([document.querySelector('#left'), document.querySelector('#right'), document.querySelector('#center')],
+    { delay : 200, removeOnSpill : true })
+    .on('drag', function(el, container, source) {
+      console.log('drag');
+    })
+    .on('drop', function(el, container, source) {
+      var id = Blaze.getData(el)._id;
+      var _status;
+      switch (container.id) {
+        case 'left':
+          _status = 'default'
+          break;
+        case 'right':
+          _status = 'inProgress'
+          break;
+        case 'center':
+          _status = 'completed'
+          break;
+      }
+
+      TasksCollection.update({ _id : id }, {
+        $set : { status : _status }
+      });
+    });
 };
 
 Template.tasks.destroyed = function() {
@@ -26,7 +49,5 @@ Template.tasks.helpers({
 });
 
 Template.tasks.events({
-  'click .workingNote' : function() {
-    console.log('clicked');
-  }
+
 });

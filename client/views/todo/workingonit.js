@@ -16,6 +16,7 @@ Template.workingOnIt.helpers({
 
 Template.workingOnIt.events({
   'click .done' : function(evt, templ) {
+    console.log('this._id',this._id);
     evt.preventDefault();
     TasksCollection.update({ _id : this._id }, {
       $set : { status : 'completed' }
