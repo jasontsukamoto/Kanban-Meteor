@@ -40,7 +40,13 @@ Template.postNewForm.events({
 
 
     $('#postNewModal').foundation('reveal', 'close');
-  }
+  },
 
+  'keypress #description' : function(evt, templ) {
+    if (evt.keyCode == 13) {
+      $('#save').trigger('click');
+    }
+
+  }
 });
 

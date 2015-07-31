@@ -5,9 +5,6 @@ Template.tasks.created = function() {
 Template.tasks.rendered = function() {
   dragula([document.querySelector('#left'), document.querySelector('#right'), document.querySelector('#center')],
     { delay : 200, removeOnSpill : true })
-    .on('drag', function(el, container, source) {
-      console.log('drag');
-    })
     .on('drop', function(el, container, source) {
       var id = Blaze.getData(el)._id;
       var _status;
