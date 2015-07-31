@@ -3,7 +3,7 @@ Template.tasks.created = function() {
 };
 
 Template.tasks.rendered = function() {
-  dragula([document.querySelector('#left'), document.querySelector('#right'), document.querySelector('#center')]);
+  dragula([document.querySelector('#left'), document.querySelector('#right'), document.querySelector('#center')], { delay : 200 });
 };
 
 Template.tasks.destroyed = function() {
@@ -25,3 +25,8 @@ Template.tasks.helpers({
   }
 });
 
+Template.tasks.events({
+  'click .workingNote' : function() {
+    console.log('clicked');
+  }
+});
