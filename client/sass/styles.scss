@@ -272,11 +272,11 @@
         max-height:850px;
         text-align: left;
         padding: 20px 10px;
-        overflow: auto;
 
         .columnHeader {
           margin-left: 10px;
           height: 50px;
+          width: 100%;
 
           p {
             position: fixed;
@@ -284,6 +284,10 @@
             font-size: 2.3em;
             font-family: 'Timmana', sans-serif;
           }
+        }
+        .taskList {
+        overflow: auto;
+        max-height: 700px;
         }
 
         .toDoNote {

@@ -42,7 +42,7 @@ Template.registerForm.helpers({
 });
 
 Template.registerForm.events({
-  'submit form' : function(event) {
+  'submit form' : function(event, templ) {
     event.preventDefault();
     console.log('clicked');
     var email = $('#email').val();
@@ -54,6 +54,8 @@ Template.registerForm.events({
       password : password
     });
 
+    templ.find('#email').value = "";
+    templ.find('#password').value ="";
     $('#registerModal').foundation('reveal', 'close');
   }
 });
