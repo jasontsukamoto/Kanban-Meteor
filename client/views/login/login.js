@@ -53,5 +53,7 @@ Template.registerForm.events({
       email : email,
       password : password
     });
+
+    $('#registerModal').foundation('reveal', 'close');
   }
 });
