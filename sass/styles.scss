@@ -2,8 +2,6 @@
   float: right;
   height: 20px;
   width: 20px;
-  border-radius: 5px;
-  border: 1px solid black;
   text-align: center;
   line-height: 17px;
   color: red;
@@ -44,36 +42,214 @@
 
 }
 
+.loginPage {
+  height: 400px;
+  width: 100%;
+  margin: auto;
+  margin-top: 0px;
+  padding-top: 300px;
+
+  h2 {
+    color: white;
+    text-shadow: 4px 4px rgba(0,0,0,.8);
+    font-size: 3em;
+    font-weight: bolder;
+  }
+  form {
+
+    .email {
+      margin: 0 auto;
+      width: 20%;
+      display: inline-block;
+      text-align: left;
+      :focus {
+        border: 5px red solid;
+      }
+
+      p {
+        color: white;
+        font-size: 1.5em;
+      }
+    }
+
+    .password {
+      margin: 0 auto;
+      width: 20%;
+      text-align: left;
+      :focus {
+        border: 5px solid red;
+      }
+        p {
+          color: white;
+          font-size: 1.5em;
+        }
+    }
+
+    .actionButtons {
+      width: 15%;
+      margin: 0 auto;
+
+      .registerButton {
+        width: 100px;
+        height: 40px;
+        background-color: rgba(179,179,179,.8);
+        border: 1px solid rgba(179,179,179,.8);
+        border-radius: 3px;
+        margin: 0 auto;
+        box-shadow: 3px 3px 1px rgba(0,0,0,.8);
+        font-weight: bolder;
+        display: inline-block;
+        float: left;
+        margin-left: 20px;
+
+        a {
+          font-size: 1em;
+          line-height: 40px;
+          color: black;
+        }
+      }
+
+      .registerButton:hover {
+        width: 105px;
+        height: 45px;
+        color: black;
+        font-size: 1.2em;
+      }
+
+      .loginButton:hover {
+        width: 105px;
+        height: 45px;
+        color: black;
+        font-size: 1.2em;
+      }
+
+      .loginButton {
+        width: 100px;
+        height: 40px;
+        background-color: rgba(179,179,179,.8);
+        border: 1px solid rgba(179,179,179,.8);
+        border-radius: 3px;
+        box-shadow: 3px 3px 1px rgba(0,0,0,.8);
+        font-size: 1em;
+        font-weight: bolder;
+      }
+    }
+  }
+}
+
 .background {
   background-image: url('http://www.wallcdn.com/wp-content/uploads/2015/04/San-Francisco-Golden-Gate-Bridge-High-Quality-Wallpaper-b4ude-Free1.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100%;
-  // position: fixed;
-  width: 100%;
+  height: 100%;
+  max-width: 100%;
 
   #welcome {
     width: 100%;
     height: 60px;
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0,0,0,.0);
     text-align: center;
 
     #newTaskShow {
-      float: right;
+      position: fixed;
+      right: 5px;
+      bottom: 5px;
       color: white;
       display: inline-block;
       font-size: 4em;
       text-decoration: none;
-      margin-right: 30px;
-      line-height: 50px;
+      padding-top: 5px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      border: 3px solid white;
     }
 
-    h1 {
+    #newTaskShow:hover {
+      height: 80px;
+      width: 80px;
+      font-size: 6em;
+      border-radius: 80px;
+      border: 5px solid white;
+      text-align: center;
+      padding-top: 12px;
       color: white;
-      font-size: 3em;
-      font-weight: bolder;
-      font-family: 'Timmana', sans-serif;
-      // line-height: 70px;
+      background-color: green;
+    }
+
+    .navbar {
+      height: 50px;
+      margin-bottom: 40px;
+      padding-top: 10px;
+      #logo {
+        font-size: 3em;
+        float: left;
+        color: rgba(255,255,255,.8);
+        font-size: 3em;
+        font-weight: bolder;
+        line-height: 50px;
+        margin-top: 0px;
+        margin-left: 10px;
+
+      }
+
+      #logo:hover {
+        color: red;
+      }
+
+      .edit:hover {
+        border: 2px solid red;
+        a {
+          color: red;
+          font-size: 1.2em;
+        }
+      }
+
+      .logout:hover {
+        border: 2px solid red;
+
+        a {
+          color: red;
+          font-size: 1.2em;
+        }
+      }
+
+      a {
+        color: rgba(255,255,255,.8);
+        font-size: 1em;
+        font-weight: bolder
+      }
+
+      .edit {
+        display: inline-block;
+        float: right;
+        margin-right: 30px;
+        padding: 5px;
+        border: 2px solid rgba(255,255,255,.8);
+        border-radius: 5px;
+        height: 40px;
+        margin-top: 5px;
+
+
+        a {
+          margin-bottom: 8px;
+        }
+      }
+
+      .logout {
+        display: inline-block;
+        float: right;
+        margin-right: 30px;
+        padding: 5px;
+        border: 2px solid rgba(255,255,255,.8);
+        border-radius: 5px;
+        height: 40px;
+        margin-top: 5px;
+        a {
+          margin-bottom: 8px;
+        }
+      }
+
     }
 
     .userColumn {
@@ -83,23 +259,28 @@
       .headerColumn {
         background-color: rgba(220,220,220,.7);
         border-radius: 15px;
+        min-height: 70px;
         max-height:850px;
         text-align: left;
         padding: 20px 10px;
         overflow: auto;
 
-
-        > p {
-          font-family: 'Timmana', sans-serif;
-          font-size: 2.3em;
-          color: black;
+        .columnHeader {
           margin-left: 10px;
-          margin-bottom: 0px;
+          // display: block;
+          height: 50px;
+
+          p {
+            position: fixed;
+            color: black;
+            font-size: 2.3em;
+            font-family: 'Timmana', sans-serif;
+          }
         }
 
         .toDoNote {
           background-color: rgba(255,255,255,.8);
-          margin: 0 10px 10px 10px;
+          margin: 0px 10px 10px 10px;
           border-radius: 15px;
 
           .messageField {

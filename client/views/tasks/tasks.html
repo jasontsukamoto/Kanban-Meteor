@@ -2,7 +2,9 @@
   <div class="wrapper row">
     <div id="toDo" class="small-12 large-4 medium-4 columns userColumn">
       <div class="headerColumn container" id="left">
-        <p>To Do</p>
+        <div class="columnHeader">
+          <p>To Do</p>
+        </div>
         {{#each queueList}}
           {{> toDo}}
         {{/each}}
@@ -11,7 +13,9 @@
 
     <div class="small-12 large-4 medium-4 columns userColumn" id="inProgress">
       <div id="right" class="container headerColumn">
-        <p>Doing</p>
+        <div class="columnHeader">
+          <p>Doing</p>
+        </div>
         {{#each inProgressList}}
           {{> workingOnIt}}
         {{/each}}
@@ -20,12 +24,13 @@
 
     <div class="small-12 large-4 medium-4 columns userColumn" id="done">
       <div id="center" class="container headerColumn">
-        <p>Done!</p>
-          {{#each finishedList}}
-            {{> completed}}
-          {{/each}}
+        <div class="columnHeader">
+          <p>Done!</p>
+        </div>
+        {{#each finishedList}}
+          {{> completed}}
+        {{/each}}
       </div>
     </div>
-
   </div>
 </template>
