@@ -25,27 +25,30 @@ Template.login.events({
   }
 });
 
-Template.register.created = function() {
+Template.registerForm.created = function() {
 
 };
 
-Template.register.rendered = function() {
+Template.registerForm.rendered = function() {
 
 };
 
-Template.register.destroyed = function() {
+Template.registerForm.destroyed = function() {
 
 };
 
-Template.register.helpers({
+Template.registerForm.helpers({
 
 });
 
-Template.register.events({
+Template.registerForm.events({
   'submit form' : function(event) {
     event.preventDefault();
-    var email = $('[name=email]').val();
-    var password = $('[name=password]').val();
+    console.log('clicked');
+    var email = $('#email').val();
+    var password = $('#password').val();
+    console.log('email',email);
+    console.log('password',password);
     Accounts.createUser({
       email : email,
       password : password

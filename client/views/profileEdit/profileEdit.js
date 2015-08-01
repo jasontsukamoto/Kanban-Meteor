@@ -19,8 +19,8 @@ Template.profileEdit.helpers({
 Template.profileEdit.events({
  'submit form' : function(evt, templ) {
     evt.preventDefault();
-    Meteor.users.update({ _id : Meteor.userId() },
-      { $set : { "emails" : [{ address : evt.target.username.value }] } })
+    Accounts.update({ _id : Meteor.userId() },
+      { $set : { "emails" : [{ address : evt.target.email.value }] } })
 
   }
 });

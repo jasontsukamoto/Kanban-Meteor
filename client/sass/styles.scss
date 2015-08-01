@@ -22,7 +22,7 @@
 .centerButtonClass {
   width: 32%;
   display: inline-block;
-  background-color: rgba(0,155,0,.4);
+  background-color: rgba(0,155,0,.8);
   border-radius: 5px;
   text-align: center;
   font-weight: bolder;
@@ -37,7 +37,7 @@
   font-weight: bolder;
   text-align: center;
   border-radius: 5px;
-  background-color: rgba(0,155,0,.4);
+  background-color: rgba(0,155,0,.8);
   float: left;
 
 }
@@ -51,7 +51,7 @@
 
   h2 {
     color: white;
-    text-shadow: 4px 4px rgba(0,0,0,.8);
+    text-shadow: 5px 5px rgba(0,0,0,.7);
     font-size: 3em;
     font-weight: bolder;
   }
@@ -62,6 +62,7 @@
       width: 20%;
       display: inline-block;
       text-align: left;
+
       :focus {
         border: 5px red solid;
       }
@@ -69,6 +70,8 @@
       p {
         color: white;
         font-size: 1.5em;
+        text-shadow: 3px 3px rgba(0,0,0,.7);
+
       }
     }
 
@@ -82,6 +85,8 @@
         p {
           color: white;
           font-size: 1.5em;
+          text-shadow: 3px 3px rgba(0,0,0,.7);
+
         }
     }
 
@@ -114,6 +119,8 @@
         height: 45px;
         color: black;
         font-size: 1.2em;
+        box-shadow: 5px 5px 2px rgba(0,0,0,.8);
+
       }
 
       .loginButton:hover {
@@ -121,6 +128,8 @@
         height: 45px;
         color: black;
         font-size: 1.2em;
+        box-shadow: 5px 5px 2px rgba(0,0,0,.8);
+
       }
 
       .loginButton {
@@ -135,6 +144,7 @@
       }
     }
   }
+
 }
 
 .background {
@@ -147,7 +157,6 @@
   #welcome {
     width: 100%;
     height: 60px;
-    background-color: rgba(0,0,0,.0);
     text-align: center;
 
     #newTaskShow {
@@ -267,7 +276,6 @@
 
         .columnHeader {
           margin-left: 10px;
-          // display: block;
           height: 50px;
 
           p {
@@ -279,7 +287,7 @@
         }
 
         .toDoNote {
-          background-color: rgba(255,255,255,.8);
+          background-color: rgb(255,255,255);
           margin: 0px 10px 10px 10px;
           border-radius: 15px;
 
@@ -357,7 +365,7 @@
               }
               .backToQueue {
                 @extend .leftButtonClass;
-                background-color: rgba(255,0,0,.4);
+                background-color: rgba(255,0,0,.7);
               }
               .timestamp {
                 @extend .rightButtonClass;
@@ -399,7 +407,7 @@
 
               .backToWorking {
                 @extend .leftButtonClass;
-                background-color: rgba(255,0,0,.4);
+                background-color: rgba(255,0,0,.7);
               }
 
               .centerButton {
